@@ -34,7 +34,7 @@ block="server {
 location ~* ^/setup($|/) {
     root \$MAGE_ROOT;
     location ~ ^/setup/index.php {
-        fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+        fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
 
         fastcgi_param  PHP_FLAG  'session.auto_start=off \n suhosin.session.cryptua=off';
         fastcgi_param  PHP_VALUE 'memory_limit=756M \n max_execution_time=600';
